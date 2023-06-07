@@ -1,0 +1,71 @@
+html {
+  background: #fff;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #23272A;
+}
+
+header {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 115px;
+  z-index: 10;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/123024/menutexture.png);
+  background-position: center top;
+  background-size: auto 200px;
+  background-repeat: repeat-x;
+}
+
+header .inner {
+  height: 70px;
+  max-width: 1060px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+header .inner .logo {
+  display: block;
+  height: 100px;
+  max-width: 400px;
+  position: absolute;
+  left: 0;
+  background-color: white;
+  text-align: center;
+}
+
+header .inner .logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  padding-top: auto;
+}
+
+header .inner nav a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  margin-left: 20px; 
+  position: relative;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://images5.alphacoders.com/320/320927.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
