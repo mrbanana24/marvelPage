@@ -4,14 +4,6 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #23272A;
-  height: 100%;
-  width: 100%;
-}
-
 header {
   display: flex;
   width: 100%;
@@ -59,12 +51,54 @@ header .inner nav a:hover {
 
 body {
   margin: 0;
+  background-image: url(./assets/backgroundImage.jpg);
+  background-size: cover;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  width: 100%;
 }
 
 /* Comics Css */
 
-#grid {
+main .best-sellers{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 90vh;
+  width: 100%;
+}
+
+main .best-sellers .title {
+  font-size: 1em;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 10px;
+  font: 200 RobotoCondensed Bold,
+      Trebuchet MS,
+      Helvetica,
+      Arial,
+      sans-serif;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.grid-container {
+  height: 70vh;
+  width: 80%;
+  padding: 20px;
+  background-color: #23272A;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+#grid {
+  height: 100%;
+  width: 100%;
   transition: 500ms; 
   display: grid; 
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
