@@ -93,50 +93,74 @@ main {
   --delay: 1000ms;
   background-repeat: no-repeat;
   animation: colorChange 10s ease var(--delay) infinite both;
+  position: relative;
+}
+
+.item-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.item:hover .item-overlay {
+  opacity: 1;
+}
+
+.item-text {
+  color: white;
+  font-size: 20px;
 }
 
 .item:nth-child(1) {
-  background-image: url(./assets/moviesImages/ironman1.jpeg);
+  background-image: url(./assets/gamesImages/ironmanGame1.jpeg);
   background-size: cover;
 }
 
 .item:nth-child(2) {
-  background-image: url(./assets/moviesImages/ironman2.jpeg);
+  background-image: url(./assets/gamesImages/ironmanGame2.jpeg);
   background-size: cover;
 }
 
 .item:nth-child(3) {
-  background-image: url(./assets/moviesImages/ironman3.jpeg);
+  background-image: url(./assets/gamesImages/ironmanGame3.jpeg);
   background-size: cover;
 }
 
 .item:nth-child(4) {
-  background-image: url(./assets/moviesImages/avengers1.jpeg);
+  background-image: url(./assets/gamesImages/ironmanGame4.jpeg);
   background-size: cover;
 }
 
 .item:nth-child(5) {
-  background-image: url(./assets/moviesImages/avengers2.jpeg);
+  background-image: url(./assets/gamesImages/ironmanGame5.jpeg);
   background-size: cover;
 }
 
 .item:nth-child(6) {
-  background-image: url(./assets/moviesImages/avengerinfinitywar.webp);
+  background-image: url(./assets/gamesImages/ironmanGame6.webp);
   background-size: cover;
 }
 
 .item:nth-child(7) {
-  background-image: url(./assets/moviesImages/civilwar.avif);
+  background-image: url(./assets/gamesImages/ironmanGame7.jpeg);
   background-size: cover;
 }
 
 .item:nth-child(8) {
-  background-image: url(./assets/moviesImages/spidermanhomecoming.jpeg);
+  background-image: url(./assets/gamesImages/ironmanGame8.webp);
   background-size: cover;
 }
 
 .item:nth-child(9) {
-  background-image: url(./assets/moviesImages/avengersendgame.jpeg);
+  background-image: url(./assets/gamesImages/ironmanGame9.jpeg);
   background-size: cover;
 }
 
