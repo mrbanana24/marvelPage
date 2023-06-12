@@ -1,0 +1,266 @@
+html {
+  background: #fff;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  background-color: #23272A;
+  justify-content: center;
+}
+
+header .inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 80%;
+}
+
+header .inner .logo {
+  justify-content: start;
+  height: 100%;
+}
+
+header .inner .logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+header .inner>nav {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+header .inner nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+}
+
+header .inner nav a:hover {
+  color: #7289DA;
+}
+
+body {
+  margin: 0;
+  background-image: url(./assets/backgroundImage.jpg);
+  background-size: cover;
+}
+
+main{
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-container{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CARDS GRID STYLE*/
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+}
+
+.card-list .card {
+  position: relative;
+  width: 20%;
+  height: 50%;
+  margin: 10px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  transform: rotateY(0);
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background-color: #23272A;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.card-list .card .card-image {
+  width: 100%;
+  height: 100%;
+}
+
+.card-list .card .card-image>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-list .card .card-description {
+  margin-left: 6px;
+  width: 100%;
+  height: 100%;
+}
+
+/* ITEMS GRID STYLE*/
+
+.container {
+  display: flex;
+  height: 50%;
+  width: 80%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .grid-container {
+  width: 100%;
+  height: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 100%;
+  height: 100%;
+  gap: 20px;
+  animation: resize 10s ease infinite both;
+}
+
+.item {
+  --delay: 1000ms;
+    background-repeat: no-repeat;
+    animation: colorChange 10s ease var(--delay) infinite both;
+}
+
+.item:nth-child(1) {
+  background-image: url(./assets/moviesImages/ironman1.jpeg);
+  background-size: cover;
+}
+
+.item:nth-child(2) {
+  background-image: url(./assets/moviesImages/ironman2.jpeg);
+  background-size: cover;
+}
+
+.item:nth-child(3) {
+  background-image: url(./assets/moviesImages/ironman3.jpeg);
+  background-size: cover;
+}
+
+.item:nth-child(4) {
+  background-image: url(./assets/moviesImages/avengers1.jpeg);
+  background-size: cover;
+}
+
+.item:nth-child(5) {
+  background-image: url(./assets/moviesImages/avengers2.jpeg);
+  background-size: cover;
+}
+
+.item:nth-child(6) {
+  background-image: url(./assets/moviesImages/avengerinfinitywar.webp);
+  background-size: cover;
+}
+.item:nth-child(7) {
+  background-image: url(./assets/moviesImages/civilwar.avif);
+  background-size: cover;
+}
+
+.item:nth-child(8) {
+  background-image: url(./assets/moviesImages/spidermanhomecoming.jpeg);
+  background-size: cover;
+}
+
+.item:nth-child(9) {
+  background-image: url(./assets/moviesImages/avengersendgame.jpeg);
+  background-size: cover;
+}
+
+
+@keyframes colorChange {
+  0% {
+    background-color: hsl(36, 100%, 64%);
+  }
+
+  25% {
+    background-color: hsl(76, 100%, 64%);
+  }
+
+  50% {
+    background-color: hsl(206, 100%, 64%);
+  }
+
+  75% {
+    background-color: hsl(305, 100%, 64%);
+  }
+
+  100% {
+    background-color: hsl(36, 100%, 64%);
+  }
+}
+
+@keyframes resize {
+  0% {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  25% {
+    grid-template-columns: 1fr 2fr 3fr;
+    grid-template-rows: 1fr 2fr 3fr;
+  }
+
+  50% {
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 1fr 5fr 1fr;
+  }
+
+  75% {
+    grid-template-columns: 3fr 2fr 1fr;
+    grid-template-rows: 3fr 2fr 1fr;
+  }
+
+  100% {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
