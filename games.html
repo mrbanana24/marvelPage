@@ -29,6 +29,14 @@
       <!-- games -->
       <!-- Best sellers -->
       <div class="container">
+        <!-- buscador -->
+        <div class="search-container">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Buscar películas..."
+          />
+        </div>
         <div class="grid-container">
           <div class="grid">
             <div class="item">
@@ -84,5 +92,25 @@
     <footer>
       <!-- more info about my page -->
     </footer>
+
+    <script>
+      const searchInput = document.getElementById("searchInput");
+      const items = document.querySelectorAll(".item");
+
+      searchInput.addEventListener("input", function () {
+        const searchTerm = searchInput.value.toLowerCase();
+
+        items.forEach((item) => {
+          const itemText = item
+            .querySelector(".item-text")
+            .textContent.toLowerCase();
+          if (itemText.includes(searchTerm)) {
+            item.style.display = "block";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      });
+    </script>
   </body>
 </html>
