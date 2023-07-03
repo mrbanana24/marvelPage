@@ -32,14 +32,22 @@
         <div class="title">
           <h2>Best Sellers</h2>
         </div>
+        <!-- buscador -->
+        <div class="search-container">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Buscar películas..."
+          />
+        </div>
         <div class="grid-container">
           <div id="grid">
-            <div class="left"></div>
-            <div class="center"></div>
-            <div class="right"></div>
-            <div class="extr-left"></div>
-            <div class="extr-center"></div>
-            <div class="extr-right"></div>
+            <div class="left"><p>ironman1</p></div>
+            <div class="center"><p>ironman2</p></div>
+            <div class="right"><p>ironman3</p></div>
+            <div class="extr-left"><p>ironman4</p></div>
+            <div class="extr-center"><p>ironman5</p></div>
+            <div class="extr-right"><p>ironman6</p></div>
           </div>
         </div>
       </div>
@@ -48,5 +56,26 @@
     <footer>
       <!-- more info about my page -->
     </footer>
+
+    <script>
+      const searchInput = document.getElementById("searchInput");
+      const items = document.querySelectorAll(
+        ".best-sellers .grid-container > div p"
+      );
+
+      searchInput.addEventListener("input", function () {
+        const searchTerm = searchInput.value.toLowerCase();
+
+        items.forEach((item) => {
+          const itemText = item.textContent.toLowerCase();
+          const parentDiv = item.parentElement;
+          if (itemText.includes(searchTerm)) {
+            parentDiv.style.display = "block";
+          } else {
+            parentDiv.style.display = "none";
+          }
+        });
+      });
+    </script>
   </body>
 </html>

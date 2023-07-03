@@ -63,6 +63,16 @@ main {
   width: 100%;
 }
 
+/* Movies engine */
+#searchInput {
+  width: 150px;
+  height: 50px;
+  border: 1px solid #23272A;
+  border-radius: 10px;
+  background-color: #cbcbcb;
+  color: rgb(255, 252, 252);
+}
+
 /* Comics Css */
 
 main .best-sellers{
