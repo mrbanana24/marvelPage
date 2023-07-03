@@ -29,6 +29,14 @@
 
       <!-- movies -->
       <div class="main-container">
+        <!-- buscador -->
+        <div class="search-container">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Buscar películas..."
+          />
+        </div>
         <!-- movies list -->
         <div class="card-list">
           <!--Card1 -->
@@ -227,5 +235,33 @@
     <footer>
       <!-- more info about my page -->
     </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // nos aseguramos que cargue la pagina antes de ejecutar js
+        const searchInput = document.getElementById("searchInput");
+        const cards = Array.from(document.getElementsByClassName("card"));
+
+        searchInput.addEventListener("input", () => {
+          const searchText = searchInput.value.toLowerCase();
+
+          cards.forEach((card) => {
+            const title = card.querySelector("h2").textContent.toLowerCase();
+            const description = card
+              .querySelector("p")
+              .textContent.toLowerCase();
+
+            if (
+              title.includes(searchText) ||
+              description.includes(searchText)
+            ) {
+              card.style.display = "block";
+            } else {
+              card.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
